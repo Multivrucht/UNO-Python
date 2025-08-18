@@ -1,0 +1,30 @@
+from UNO.config_selector import ConfigSelector
+from UNO.game_config import DeckConfiguration, GameRules
+from UNO.game import Game
+
+
+def main():
+    """ Main entry point with configuration selection. """
+    print("Welcome to UNO!")
+
+    # Step 1: Get player names and select rule- and deckconfiguration
+    players, rules, deck_config = ConfigSelector.select_game_config()
+
+    # Step 2: Check if there any issues with loading a custom configration
+    # This error checking is rather basic and is more for demonstrating purposes
+    deck_issues = DeckConfiguration.validate_deckconfig(deck_config)
+    rule_issues = GameRules.validate_rules(rules)
+    if deck_issues or rule_issues:
+        print("LOADING CONFIGURATION ERROR: Errors found while loading custom deck/rule configuration. \n")
+        print("\n".join(str(issue) for issue in deck_issues))
+        print("\n".join(str(issue) for issue in rule_issues))
+        print("\n--> Reverting to defaults...")
+        players, rules, deck_config = ConfigSelector.provide_default_game()
+
+    #Step 3: Start the game
+    game = Game(players, rules, deck_config)
+    game.play()
+
+
+if __name__ == "__main__":
+    main()

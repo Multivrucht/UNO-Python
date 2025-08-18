@@ -1,0 +1,6 @@
+__pycache__
+.venv/
+personal_notes/
+.github/
+GAMENEEDS.md
+tests/
