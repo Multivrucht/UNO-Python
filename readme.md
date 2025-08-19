@@ -6,7 +6,7 @@ Current version: V0.1
 
 **Project Disclaimer:**
 - Built using Python 3.15.5
-- This project was built as a learning experience; the usage of AI assisted coding was very limited
+- This project was built as a learning experience; as such the usage of AI was very minimal
 - This is an early version
 
 
@@ -20,16 +20,17 @@ This project implements the UNO card game with support for:
   - Built-in custom configuration error checking and correction
 - Command-line interface (for now!)
 - Event-driven architecture, using an "observer pattern" to track game events
-- The implementation focuses on modularity, extensibility, and clean code practices (check the limitations section)
+- The implementation focuses on modularity, extensibility, and clean code practices (but there is still plenty of room for improvement, check the limitations section)
 
 **Current Limitations**
 - Text-Only Interface: Currently only works in command-line, which isn't very exciting visually. Will be refactored later on to include UI.
 - Error messages: These are mostly print based due to the current UI nature
 - Typehinting errors: While the code works correctly and has proper failsafes, some typehint errors might indicate some less optimal code, fixing this would be right thing to do
-- Better interfacing for main game object: The main game object is passed on more than I like as an object, which is dangerous and should be avoided. This requires proper interfacing.
+- Better interfacing for main game object: The main game object is passed on more than I like as an object, which is dangerous and should be avoided. This requires proper interfacing
 - Save/loading: Currently partially implemented
 - Card effect validation: Currently effect validaiton is in the card class, not in the validation method. This is a refactor relic of a previous implementation decision
-- Builder/factory: Not properly implemented the builder and factory pattern, does not support extensibility of new cards
+- Builder/factory: Not properly implemented the builder and factory pattern, does not allow for easy addition of new cards yet
+- Inconsistent code commenting; not necessarily a limitation but I am trying out various code commenting methods. I will settle on one method in future versions. 
 
 
 **Refactor Plans:**
