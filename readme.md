@@ -2,6 +2,8 @@
 
 A Python implementation of the classic UNO card game, designed with clean architecture and object-oriented principles. This project holds the core logic of the game which will later be refactored into a multiplayer variant. 
 
+Current version: V0.1
+
 **Project Disclaimer:**
 - Built using Python 3.15.5
 - This project was built as a learning experience; the usage of AI assisted coding was very limited
